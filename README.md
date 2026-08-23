@@ -36,15 +36,9 @@ npm run build
 npm run test:sites
 ```
 
-## GitHub процес
-
-Работата се изпълнява на отделни тематични клонове. Всеки клон се изпраща в GitHub с pull request към `main`, преглежда се и се слива чрез GitHub. Клоновете се запазват след сливането, за да остане видима историята на задачата.
-
-За демонстрацията на `revert` се добавя малка временна UI промяна в самостоятелен pull request. Веднага след това втори pull request съдържа автоматично създадения `git revert` къмит и връща финалния дизайн.
-
 ## Технологии
 
-React, Vite, Font Awesome icons чрез `react-icons` и Netlify за публикуване.
+React, Vite, Font Awesome icons чрез `react-icons`.
 
 ----------------------------------------------------------------------------------------------------------------
 # LeadPredictor Calculator
@@ -73,4 +67,6 @@ Six-month forecast chart
 
 Interactive response-rate sliders
 
-The project is built with React and Vite. Its Git history demonstrates feature branches, pull requests, meaningful commits, and a reverted commit.
+## Technologies
+
+The project is built with React and Vite.
