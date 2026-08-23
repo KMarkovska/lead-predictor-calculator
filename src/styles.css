@@ -31,8 +31,6 @@ button, input, select { font: inherit; }
 .eyebrow { margin: 0 0 5px; color: #92a2b8; text-transform: uppercase; letter-spacing: .08em; font-size: .62rem; font-weight: 800; }
 h2 { margin: 0; color: #e5ebf4; font-size: .96rem; letter-spacing: -.02em; }
 .chart-note, .rates-card__hint { display: inline-flex; align-items: center; gap: 6px; color: #aebacd; font-size: .67rem; white-space: nowrap; }
-.chart-actions { display: flex; align-items: center; gap: 9px; }
-.demo-tag { padding: 4px 7px; border: 1px solid #607188; border-radius: 999px; color: #c9d4e2; font-size: .58rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
 .chart-note svg { color: #b9c5d5; }
 .bar-chart { position: relative; height: 285px; margin-top: 15px; padding: 10px 12px 24px 24px; }
 .axis-title { position: absolute; left: 0; top: 50%; color: #c5cfdb; font-size: .55rem; font-weight: 600; transform: rotate(-90deg) translateX(-50%); transform-origin: left top; }
@@ -59,4 +57,4 @@ h2 { margin: 0; color: #e5ebf4; font-size: .96rem; letter-spacing: -.02em; }
 .range-field input::-webkit-slider-thumb { appearance: none; width: 24px; height: 24px; border: 4px solid #eef3f9; border-radius: 50%; background: #d4dce7; box-shadow: 0 0 0 1px #7b899c; }
 .range-field output { grid-column: 2; color: #c2ccd9; font-size: .69rem; font-weight: 500; }
 @media (max-width: 900px) { .app-shell { grid-template-columns: 1fr; padding: 18px; } .sidebar { display: grid; grid-template-columns: 1fr; } .settings-card { margin-top: 8px; } .chart-card { grid-template-columns: 1fr; } .result-stack { grid-template-columns: repeat(3, 1fr); } .dashboard { grid-template-rows: auto auto; } }
-@media (max-width: 620px) { .app-shell { padding: 12px; } .chart-card, .rates-card, .settings-card { border-radius: 12px; } .chart-card { padding: 14px; } .chart-panel__title-row, .rates-card__heading { align-items: flex-start; flex-direction: column; gap: 7px; } .chart-actions { align-items: flex-start; flex-direction: column; gap: 6px; } .chart-note, .rates-card__hint { white-space: normal; } .result-stack { grid-template-columns: 1fr; } .bar-row__value { display: none; } .chart-scale { font-size: .49rem; } }
+@media (max-width: 620px) { .app-shell { padding: 12px; } .chart-card, .rates-card, .settings-card { border-radius: 12px; } .chart-card { padding: 14px; } .chart-panel__title-row, .rates-card__heading { align-items: flex-start; flex-direction: column; gap: 7px; } .chart-note, .rates-card__hint { white-space: normal; } .result-stack { grid-template-columns: 1fr; } .bar-row__value { display: none; } .chart-scale { font-size: .49rem; } }
