@@ -4,6 +4,8 @@
 
 <img width="1887" height="932" alt="image" src="https://github.com/user-attachments/assets/9ddf360c-4b82-4984-84a4-f25f72bf8c31" />
 
+Отвори проекта тукМ https://lead-predictor-calculator-kmarkovska.netlify.app/
+
 ## Какво изчислява
 
 - **Клиенти** = Целеви оборот / Средна стойност на поръчка
