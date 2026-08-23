@@ -21,7 +21,7 @@ button, input, select { font: inherit; }
 .input-with-icon, .money-input { position: relative; display: block; }
 .input-with-icon input { padding-right: 37px; }
 .input-with-icon svg { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #d4dce7; pointer-events: none; font-size: .8rem; }
-.money-input svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: #7d8c9f; font-size: .75rem; }
+.money-prefix { position: absolute; z-index: 1; left: 13px; top: 50%; transform: translateY(-50%); color: #a2afbf; font-size: .75rem; font-weight: 700; }
 .money-input input { padding-left: 28px; }
 .money-input input::-webkit-inner-spin-button { appearance: none; }
 .dashboard { min-width: 0; display: grid; grid-template-rows: minmax(362px, 1fr) auto; gap: 20px; }
