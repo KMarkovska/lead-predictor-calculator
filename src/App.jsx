@@ -60,6 +60,7 @@ export function App() {
   const [orderValue, setOrderValue] = useState(1000);
   const [leadRate, setLeadRate] = useState(40);
   const [prospectRate, setProspectRate] = useState(20);
+  const [hoveredMonth, setHoveredMonth] = useState(null);
   const text = copy[language];
 
   const forecast = useMemo(
@@ -119,15 +120,39 @@ export function App() {
               <span className="axis-title">{text.month}</span>
               <div className="chart-grid" />
               <div className="chart-bars">
-                {forecast.monthlyProspects.map((amount, index) => (
-                  <div className="bar-row" key={`${amount}-${index}`}>
+                {forecast.monthlyProspects.map((amount, index) => {
+                  const month = index + 1;
+                  const monthProgress = month / forecast.months;
+                  const monthLeads = wholePeople(forecast.leads * monthProgress);
+                  const monthCustomers = wholePeople(forecast.customers * monthProgress);
+
+                  return (
+                  <div
+                    className={`bar-row${hoveredMonth === index ? " bar-row--active" : ""}`}
+                    key={`${amount}-${index}`}
+                    tabIndex="0"
+                    aria-label={`Month ${month}: ${amount} ${text.prospects}, ${monthLeads} ${text.leads}, ${monthCustomers} ${text.customers}`}
+                    onMouseEnter={() => setHoveredMonth(index)}
+                    onMouseLeave={() => setHoveredMonth(null)}
+                    onFocus={() => setHoveredMonth(index)}
+                    onBlur={() => setHoveredMonth(null)}
+                  >
                     <span className="bar-row__label">{index + 1}</span>
                     <span className="bar-row__bar" style={{ width: `${(amount / forecast.maxProspects) * 100}%` }}>
                       <span className="bar-row__highlight" />
+                      {hoveredMonth === index && (
+                        <span className="chart-tooltip" role="status">
+                          <strong>Month #{month}</strong>
+                          <span>Prospects: {amount}</span>
+                          <span>Leads: {monthLeads}</span>
+                          <span>Customers: {monthCustomers}</span>
+                        </span>
+                      )}
                     </span>
                     <span className="bar-row__value">{amount}</span>
                   </div>
-                ))}
+                  );
+                })}
               </div>
               <div className="chart-scale" aria-hidden="true"><span>0 {text.people}</span><span>{wholePeople(forecast.prospects / 3)} {text.people}</span><span>{wholePeople((forecast.prospects * 2) / 3)} {text.people}</span><span>{forecast.prospects} {text.people}</span></div>
             </div>
