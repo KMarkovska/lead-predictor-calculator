@@ -4,7 +4,7 @@
 
 <img width="1887" height="932" alt="image" src="https://github.com/user-attachments/assets/9ddf360c-4b82-4984-84a4-f25f72bf8c31" />
 
-Отвори проекта тукМ https://lead-predictor-calculator-kmarkovska.netlify.app/
+Отвори проекта в Netlify: https://lead-predictor-calculator-kmarkovska.netlify.app/
 
 ## Какво изчислява
 
@@ -45,3 +45,32 @@ npm run test:sites
 ## Технологии
 
 React, Vite, Font Awesome icons чрез `react-icons` и Netlify за публикуване.
+
+----------------------------------------------------------------------------------------------------------------
+# LeadPredictor Calculator
+
+An interactive calculator for forecasting the required number of customers, leads, and prospects based on a revenue target, average order value, and response rates.
+
+Open the live Netlify project: https://lead-predictor-calculator-kmarkovska.netlify.app/
+
+## Formulas
+
+Customers = Revenue / Average Order Value
+
+Leads = Customers × 100 / Lead Response Rate
+
+Prospects = Leads × 100 / Prospect Response Rate
+
+## Features
+
+Automatic recalculation when values change
+
+English and Bulgarian language options
+
+Currency selection
+
+Six-month forecast chart
+
+Interactive response-rate sliders
+
+The project is built with React and Vite. Its Git history demonstrates feature branches, pull requests, meaningful commits, and a reverted commit.
