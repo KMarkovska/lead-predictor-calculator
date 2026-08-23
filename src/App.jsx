@@ -113,7 +113,10 @@ export function App() {
                 <p className="eyebrow">{text.forecast}</p>
                 <h2 id="forecast-title">{text.outreach}</h2>
               </div>
-              <span className="chart-note"><FaChartBar aria-hidden="true" /> {forecast.months} {text.monthPlan}</span>
+              <div className="chart-actions">
+                <span className="demo-tag">Sample data</span>
+                <span className="chart-note"><FaChartBar aria-hidden="true" /> {forecast.months} {text.monthPlan}</span>
+              </div>
             </div>
             <div className="bar-chart" role="img" aria-label={`${text.prospects} rise to ${forecast.prospects} ${text.people} over ${forecast.months} months`}>
               <span className="axis-title">{text.month}</span>
